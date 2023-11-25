@@ -8,7 +8,8 @@ def root():
 
 @app.route('/api/player', methods=["POST"])
 def player():
-    return jsonify({"rest": "hi"})
+    data = {"test": 69}
+    return jsonify(data)
 
 if __name__ == '__main__':
     app.run()
