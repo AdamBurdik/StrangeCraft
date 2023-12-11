@@ -1,15 +1,17 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, send_file, jsonify, send_from_directory
+import shutil
+import shutil
+# from dotenv import load_dotenv
+# import hashlib
+
+# load_dotenv()
 
 app = Flask(__name__, static_url_path='/static')
 
-@app.route('/')
-def root():
-    return render_template('index.html')
-
-@app.route('/api/player', methods=["POST"])
-def player():
-    data = {"test": 69}
-    return jsonify(data)
+@app.route('/api/resourcepack')
+def api_resourcepack():
+    return send_file("pack.zip", download_name="pack.zip")
 
 if __name__ == '__main__':
+    shutil.make_archive("pack", 'zip', "pack")
     app.run()
