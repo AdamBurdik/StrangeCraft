@@ -7,7 +7,7 @@ import shutil
 
 app = Flask(__name__, static_url_path='/static')
 
-@app.route('/api/resourcepack', methods=["POST", "GET"])
+@app.route('/api/resourcepack', methods=["GET"])
 def api_resourcepack():
     return send_file("strangcraft_pack.zip", download_name="strangecraft_pack.zip", as_attachment=True)
 
