@@ -13,13 +13,6 @@
             "ascent": 17,
             "height": 174,
             "chars": ["㈁"]
-        },
-        {
-            "type": "bitmap",
-            "file": "minecraft:guis/Custom Menus/empty_menu_54.png",
-            "ascent": 17,
-            "height": 228,
-            "chars": ["Ξ"]
         }
     ]
 }
