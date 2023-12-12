@@ -1,11 +1,13 @@
-import hashlib
+import requests
 
-def generate_sha1_hash(data):
-    sha1_hash = hashlib.sha1(data.encode()).hexdigest()
-    return sha1_hash
+url = "https://www.strangecraft.eu/api/resourcepack"  # Update with the actual URL where your Flask server is running
 
-# Example usage
-data_to_hash = "Hello, World!"
-sha1_result = generate_sha1_hash(data_to_hash)
+response = requests.get(url)
 
-print(f'SHA-1 Hash: {sha1_result}')
+# Check if the request was successful (status code 200)
+if response.status_code == 200:
+    with open("downloaded_pack.zip", "wb") as f:
+        f.write(response.content)
+    print("File downloaded successfully.")
+else:
+    print(f"Error: {response.status_code}, {response.text}")
