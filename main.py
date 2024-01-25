@@ -10,11 +10,11 @@ def root():
     return render_template('index.html')
 
 @app.route("/nabor/builder")
-def root():
+def nabor_builder():
     return redirect("https://forms.gle/16Z2TFpDVY2fbk2G9")
 
 @app.route("/nabor/helper")
-def root():
+def nabor_helper():
     return redirect("https://forms.gle/xqiLifQ7MFaSoMTh7")
 
 if __name__ == '__main__':
