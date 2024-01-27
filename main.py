@@ -17,5 +17,9 @@ def nabor_builder():
 def nabor_helper():
     return redirect("https://forms.gle/xqiLifQ7MFaSoMTh7")
 
+@app.route("/resourcepack")
+def resourcepack():
+    return redirect("https://moep.tv/minecraft/rp")
+
 if __name__ == '__main__':
     app.run()
