@@ -21,5 +21,13 @@ def nabor_helper():
 def resourcepack():
     return redirect("https://moep.tv/minecraft/rp")
 
+@app.route("/vote/cc/<nickname>")
+def vote_cc(nickname):
+    return redirect(f"https://craftlist.org/strangecraft-eu?nickname={nickname}")
+
+@app.route("/vote/ms")
+def vote_ms():
+    return redirect("https://minecraftservery.eu/server/strangecraft/vote")
+
 if __name__ == '__main__':
     app.run()
