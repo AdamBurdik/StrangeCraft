@@ -26,7 +26,7 @@ def vote_cc():
     return redirect("https://czech-craft.eu/server/strangecraft/vote/")
 
 @app.route("/vote/cl")
-def vote_cc():
+def vote_cl():
     return redirect("https://craftlist.org/strangecraft-eu")
 
 @app.route("/vote/ms")
