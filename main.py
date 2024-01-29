@@ -23,11 +23,17 @@ def resourcepack():
 
 @app.route("/vote/cc")
 def vote_cc():
+    return redirect("https://czech-craft.eu/server/strangecraft/vote/")
+
+@app.route("/vote/cl")
+def vote_cc():
     return redirect("https://craftlist.org/strangecraft-eu")
 
 @app.route("/vote/ms")
 def vote_ms():
     return redirect("https://minecraftservery.eu/server/strangecraft/vote")
+
+
 
 if __name__ == '__main__':
     app.run()
